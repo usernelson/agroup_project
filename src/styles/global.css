@@ -1,0 +1,5 @@
+/* Archivo renombrado de globalStyles.css a global.css para consistencia */
+
+/* Este archivo debe contener solo estilos globales que no pueden aplicarse desde GlobalStyles.js */
+/* Aquí deberían ir estilos para componentes de terceros que requieren selectores específicos */
+/* Los estilos existentes se han movido a GlobalStyles.js para centralizar */

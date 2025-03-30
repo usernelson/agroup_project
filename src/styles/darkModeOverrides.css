@@ -1,0 +1,129 @@
+/* Dark mode overrides for third-party components and specific elements */
+
+/* Calendar component overrides - enhanced */
+[data-theme="dark"] .rbc-calendar,
+.calendar-dark-mode {
+  color: var(--text-color);
+  background-color: var(--card-background);
+}
+
+[data-theme="dark"] .rbc-toolbar,
+.calendar-dark-mode .rbc-toolbar {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .rbc-toolbar button,
+.calendar-dark-mode .rbc-toolbar button {
+  color: var(--text-color);
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .rbc-toolbar button:hover,
+.calendar-dark-mode .rbc-toolbar button:hover {
+  background-color: var(--background-alt-color);
+}
+
+[data-theme="dark"] .rbc-toolbar button.rbc-active,
+.calendar-dark-mode .rbc-toolbar button.rbc-active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+[data-theme="dark"] .rbc-month-view,
+[data-theme="dark"] .rbc-time-view,
+[data-theme="dark"] .rbc-agenda-view,
+.calendar-dark-mode .rbc-month-view,
+.calendar-dark-mode .rbc-time-view,
+.calendar-dark-mode .rbc-agenda-view {
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .rbc-header,
+[data-theme="dark"] .rbc-header > a,
+[data-theme="dark"] .rbc-time-header-content,
+.calendar-dark-mode .rbc-header,
+.calendar-dark-mode .rbc-header > a,
+.calendar-dark-mode .rbc-time-header-content {
+  color: var(--text-color);
+  background-color: var(--background-alt-color);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .rbc-day-bg,
+[data-theme="dark"] .rbc-time-content,
+[data-theme="dark"] .rbc-month-row,
+.calendar-dark-mode .rbc-day-bg,
+.calendar-dark-mode .rbc-time-content,
+.calendar-dark-mode .rbc-month-row {
+  background-color: var(--card-background);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .rbc-off-range-bg,
+.calendar-dark-mode .rbc-off-range-bg {
+  background-color: var(--background-alt-color);
+}
+
+[data-theme="dark"] .rbc-date-cell,
+.calendar-dark-mode .rbc-date-cell {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .rbc-time-content > * + * > *,
+.calendar-dark-mode .rbc-time-content > * + * > * {
+  border-color: var(--border-color);
+}
+
+/* Fix for any dropdowns or select elements */
+[data-theme="dark"] select,
+[data-theme="dark"] select option {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+/* Fix modal backdrops in dark mode */
+[data-theme="dark"] .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Fix any data tables */
+[data-theme="dark"] table {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] table th,
+[data-theme="dark"] table td {
+  border-color: var(--border-color);
+}
+
+/* Fix dialog elements */
+[data-theme="dark"] dialog,
+[data-theme="dark"] .dialog {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+/* Fix dashboard elements */
+[data-theme="dark"] .dashboard-card {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+/* Fix dropdown menus */
+[data-theme="dark"] .dropdown-menu {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+  background-color: var(--background-alt-color);
+}

@@ -1,0 +1,94 @@
+Plataforma ia.agroup.app – Asistente de Inteligencia Artificial para Profesores
+Objetivo General
+El objetivo principal de este proyecto es desarrollar una plataforma web, ia.agroup.app, basada en React, que funcione como un asistente inteligente para profesores y alumnos. La plataforma se enfocará en proporcionar una experiencia personalizada a los docentes, permitiéndoles gestionar a sus estudiantes de manera eficiente y adaptada a su progreso académico y estilo de aprendizaje. El componente central de la plataforma será un agente de inteligencia artificial, denominado aTeacher, que proporcionará asistencia automatizada, interactuando con los usuarios de acuerdo con sus necesidades individuales y contexto académico.
+
+Objetivos Específicos
+Desarrollar un sistema de autenticación y gestión de usuarios que permita la administración segura de los accesos, con roles diferenciados para profesores y alumnos.
+
+Implementar un sistema de autenticación y autorización mediante tokens, asegurando que cada usuario tenga acceso a las funcionalidades correspondientes a su rol (profesor o alumno).
+
+Integrar el agente de inteligencia artificial aTeacher, que proporcionará asistencia automatizada a los usuarios.
+
+Desarrollar un sistema que permita que el agente AI pueda acceder a la información dinámica del usuario, como sus progresos, actividades y preferencias.
+
+Implementar un sistema de seguimiento y análisis de actividad del profesor y los alumnos.
+
+Permitir que los profesores vean datos como las últimas clases impartidas, tasa de finalización de unidades, y las actividades más utilizadas en sus clases.
+
+Facilitar la visualización de métricas relacionadas con el progreso de los alumnos, tales como su nivel de interacción, retroalimentación y desempeño en las evaluaciones.
+
+Proveer un sistema de sugerencias automáticas basado en la IA.
+
+Brindar recomendaciones personalizadas para cada profesor y alumno, como recursos educativos, ejercicios y sugerencias de mejoras basadas en el desempeño y las interacciones.
+
+Facilitar la organización y planificación de actividades académicas.
+
+Implementar una agenda digital donde los profesores puedan gestionar clases, tareas y alertas relacionadas con la planificación de sus actividades.
+
+Requerimientos para la Implementación
+Sistema de Autenticación y Gestión de Usuarios:
+
+El sistema deberá gestionar la autenticación de usuarios a través de un token seguro (JWT) que incluya datos como el nombre, correo, rol (profesor o alumno), fecha de nacimiento, teléfono, etc.
+
+El rol de cada usuario definirá las funcionalidades disponibles dentro de la plataforma.
+
+Interfaz del Agente de Inteligencia Artificial (aTeacher):
+
+El agente AI interactuará con los usuarios a través de la plataforma web, proporcionando asistencia personalizada en función de la información dinámica de cada usuario.
+
+Esta información incluirá el progreso de los estudiantes, actividades favoritas, horas de interacción, entre otros.
+
+Conexión con n8n:
+
+El sistema integrará datos estáticos y dinámicos de los usuarios para alimentar las interacciones del agente. n8n se encargará de conectar las diferentes fuentes de datos y proporcionar acceso a la información actualizada de los estudiantes y profesores.
+
+Análisis de Actividad y Evaluación:
+
+Los datos de actividad permitirán a los profesores visualizar información clave sobre su desempeño y el de sus estudiantes. Esto incluirá métricas sobre las actividades realizadas, la retroalimentación proporcionada y los resultados de las evaluaciones.
+
+Sugerencias Personalizadas:
+
+La IA del sistema podrá generar recomendaciones automáticas, tales como sugerencias de recursos didácticos o ejercicios personalizados, y alertas sobre alumnos desmotivados o con bajo desempeño.
+
+Gestión de Agenda y Organización:
+
+La plataforma incluirá herramientas para gestionar la programación de clases, tareas y recursos necesarios para las clases, así como alertas sobre actividades pendientes o materiales faltantes.
+
+Estructura del Sistema de Autenticación y Datos de Usuario
+Se gestionará la autenticación de usuarios mediante el uso de un sistema de tokens JWT. Los datos necesarios para la autenticación y la autorización incluyen información básica sobre los usuarios, como:
+
+Nombre completo
+
+Correo electrónico
+
+Número de teléfono
+
+Fecha de nacimiento
+
+Género
+
+Tipo de usuario (profesor o alumno)
+
+ID de profesor asignado (para los alumnos)
+
+Los usuarios accederán a la plataforma a través de un sistema de roles que determinará las funciones y vistas disponibles dentro del sistema. Por ejemplo, un profesor tendrá acceso a datos sobre sus alumnos, mientras que los alumnos solo verán su propio progreso.
+
+Funciones Principales de la Plataforma
+Monitoreo del Progreso Académico:
+
+Los profesores podrán visualizar el progreso de sus alumnos, identificando las actividades más efectivas y las que requieren atención adicional.
+
+Sugerencias y Recursos:
+
+El sistema IA analizará las interacciones pasadas del profesor y de los estudiantes para ofrecer recomendaciones de recursos, actividades o ejercicios que optimicen el proceso de aprendizaje.
+
+Interacción con los Estudiantes:
+
+Los profesores podrán recibir resúmenes de su interacción con los estudiantes, incluyendo la retroalimentación enviada, preguntas frecuentes y el nivel de participación en las clases.
+
+Gestión de la Agenda:
+
+La plataforma incluirá funcionalidades de agenda, recordatorios sobre clases y tareas pendientes, y alertas sobre actividades importantes.
+
+Conclusión
+La plataforma ia.agroup.app tiene el objetivo de revolucionar la forma en que los profesores gestionan y enseñan a sus estudiantes, ofreciendo un asistente inteligente que optimiza su tiempo y recursos. Con una integración efectiva de IA y un enfoque centrado en la personalización, el sistema permitirá tanto a los docentes como a los estudiantes alcanzar sus metas académicas de manera más eficiente y con una experiencia de aprendizaje mucho más rica.
