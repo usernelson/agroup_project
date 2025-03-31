@@ -1,0 +1,131 @@
+Documentación técnica del proyecto React - ia.agroup.app
+
+Este documento detalla la ubicación, modificación, flujo de trabajo y despliegue del proyecto React en el servidor de producción y desarrollo.
+
+1. Ubicación del Proyecto
+
+Ruta del proyecto en servidor:
+
+/home/jolone/my-react-app
+
+Archivos clave:
+
+Código fuente React: /home/jolone/my-react-app/src
+
+Dependencias: /home/jolone/my-react-app/package.json
+
+Compilación (producción): /home/jolone/my-react-app/build
+
+Configuración Nginx:
+
+/etc/nginx/conf.d/ia.agroup.app.conf       (Producción)
+/etc/nginx/conf.d/dev.ia.agroup.app.conf   (Desarrollo)
+
+2. Gestión del Código con Git
+
+Repositorio GitHub:
+
+https://github.com/usernelson/agroup_project.git
+
+Flujo de trabajo diario:
+
+Cada vez que se realizan cambios locales:
+
+git status             # Verifica cambios
+git add .              # Agrega cambios al staging
+git commit -m "descripción del cambio"  # Commit explicativo
+git push origin main   # Sube cambios al repositorio remoto
+
+Actualizar servidor desde GitHub:
+
+En el servidor:
+
+cd /home/jolone/my-react-app
+git pull origin main
+npm install
+
+3. Modificación del Código
+
+Estructura estándar React:
+
+Componentes: /src/components
+
+Páginas: /src/pages
+
+Estilos y assets: /src/assets o /src/styles
+
+Comandos para desarrollo:
+
+npm run dev
+
+Esto ejecuta un servidor de desarrollo React en:
+
+https://dev.ia.agroup.app
+
+4. Compilación para Producción
+
+Cuando las modificaciones sean validadas y listas para producción, ejecuta:
+
+npm run build
+
+Esto genera una versión optimizada del proyecto en:
+
+/home/jolone/my-react-app/build
+
+5. Despliegue del Proyecto
+
+Ambiente de Desarrollo (DEV)
+
+Dominio:
+
+dev.ia.agroup.app
+
+Configuración Nginx (/etc/nginx/conf.d/dev.ia.agroup.app.conf):
+
+Proxy a React dev server (puerto 3000)
+
+SSL con certificado generado por Certbot
+
+Ambiente de Producción (PROD)
+
+Dominio:
+
+ia.agroup.app
+
+Configuración Nginx (/etc/nginx/conf.d/ia.agroup.app.conf):
+
+Sirve archivos estáticos (carpeta build)
+
+SSL con certificado generado por Certbot
+
+Pasos para actualizar producción:
+
+cd /home/jolone/my-react-app
+git pull origin main
+npm install
+npm run build
+systemctl reload nginx
+
+6. Resolución de Problemas Comunes
+
+Error SSL en Nginx: revisar configuración Certbot y Nginx.
+
+Error conexión rechazada (Connection refused): confirmar que React esté activo (npm run dev para desarrollo o la carpeta build exista para producción).
+
+Problemas Cloudflare: configurar SSL como Full (strict) o desactivar proxy Cloudflare.
+
+7. Comandos Útiles
+
+Verificar puertos abiertos:
+
+ss -pltun
+
+Probar configuración Nginx:
+
+nginx -t && systemctl reload nginx
+
+Validar certificados SSL Certbot:
+
+certbot certificates
+
+Esta documentación debe mantenerse actualizada según cambien aspectos técnicos o flujos de trabajo del proyecto.
